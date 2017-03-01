@@ -26,9 +26,9 @@ def category(request, slug):
 def product(request, slug):
     
     #teste commit
-    product2 = Product.objects.get(slug=slug)
+    product3 = Product.objects.get(slug=slug)
     context = {
-        'product': product2
+        'product': product3
     }
     
     return render(request, 'catalog/product.html', context)
