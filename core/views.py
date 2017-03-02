@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
+from django.views.generic import View, TemplateView
 
 #from catalog.models import Category
 from .forms import ContactForm
@@ -11,9 +12,36 @@ import pprint
 
 # Create your views here.
 
+class IndexView(View):
+    
+#    def __call__(self, request):
+#        
+#        texts = ['desenvolvendo com Django Python', ' com curso Udemy']
+#        context = {
+#            'title': 'django E-Commerce',
+#            'texts': texts
+#            #'categories': Category.objects.all()
+#        }
+#    
+#        return render(request, 'index.html', context)
+
+    def get(self, request):
+        
+        texts = ['desenvolvendo com Django Python', ' com curso Udemy']
+        context = {
+            'title': 'django E-Commerce',
+            'texts': texts
+            #'categories': Category.objects.all()
+        }
+    
+        return render(request, 'index.html', context)
+    
+#index = IndexView()
+index = IndexView.as_view()
+
 def index(request):
     
-    texts = ['desenvolvendo com Django Python', ' com curso Udemy']
+    texts = ['desenvolvendo com Django Python', ' com curso Udemy', ' e melhorando as views']
     context = {
         'title': 'django E-Commerce',
         'texts': texts
