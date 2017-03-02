@@ -4,4 +4,6 @@
 
 manage.py
 venv/
-
+*.pyc
+.ipynb_checkpoints/
+Untitled.ipynb
