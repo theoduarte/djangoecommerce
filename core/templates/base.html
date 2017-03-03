@@ -44,7 +44,7 @@ and open the template in the editor.
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
-                        <li>Olá, {{ user }}</li>
+                        <li><span>Olá, <a href="/conta/">{{ user }}</a></span></li>
                         <li><a href="{% url 'logout' %}">Sair</a></li>
                         {% else %}
                         <li><a href="{% url 'login' %}">Entrar</a></li>
