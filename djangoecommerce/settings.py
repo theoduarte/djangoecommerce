@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'checkout.middleware.cart_item_middleware',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
