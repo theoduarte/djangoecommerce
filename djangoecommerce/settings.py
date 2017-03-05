@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'catalog',
     'accounts',
     'checkout'
+    'paypal.stadard.ipn'
 ]
 
 MIDDLEWARE = [
@@ -162,3 +163,13 @@ MESSAGE_TAGS = {
     messages_constants.WARNING: 'warning',
     messages_constants.ERROR: 'danger',
 }
+
+PAGSEGURO_TOKEN = ''
+PAGSEGURO_EMAIL = 'contato@gilenofilho.com.br'
+PAGSEGURO_SANDBOX = True
+
+PAYPAL_TEST = True
+PAYPAL_EMAIL = 'contato@gilenofilho.com.br'
+
+PAYPAL_TEST = True
+PAYPAL_EMAIL = 'contato@gilenofilho.com.br'
